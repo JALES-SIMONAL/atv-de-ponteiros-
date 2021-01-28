@@ -1,0 +1,9 @@
+//2- 
+
+//◦ p == &i  resposta: 1 
+
+ //◦ *p - *q  resposta : 3 – 5  = -2  
+
+//◦ **&p  resposta: 3  
+
+//◦ 3 - *p/(*q) + 7; resposta: 3 – 3/5 + 7 = 9,4 
