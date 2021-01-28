@@ -1,0 +1,29 @@
+// o programa imprimirá um total de 5 linhas contendo as mesmas informações 
+// primeiro apresentará o valor da variável ‘i’ utilizaram no forró para gerar a repetição das linhas 
+// depois , na mesma linha será apresentado a posição do vetor que nesse programa é igual ao valor ‘i’  
+// na mesma linha apresentará o valor guardado em cada posição do vetor posterior a isso repetirá a informação nesse valor obtida através do ponteiro ‘f’ 
+// na mesma linha será apresentado o endereço o de a cada posição do vetor de 2 fotos a primeira é utilizando o operador & e depois através da manipulação de ponteiros  
+
+exemplo das saidas:  i = 0vet[0] = 1.1*(f + 0) = 1.1&vet[0] = 'endereço'(f + 0 ) = 'endereço'
+
+#include<stdio.h>
+#include<iostream>
+#include<stdlib.h>
+using namespace std;
+
+
+int main(void){
+  float vet[5] = {1.1,2.2,3.3,4.4,5.5};
+  float *f;
+  int i;
+  f = vet;
+  printf("contador/valor/valor/endereco/endereco");
+  for(i = 0 ; i <= 4 ; i++){
+  printf("\ni = %d",i);
+  printf("vet[%d] = %.1f",i, vet[i]);
+  printf("*(f + %d) = %.1f",i, *(f+i));
+  printf("&vet[%d] = %X",i, &vet[i]);
+  printf("(f + %d) = %X",i, f+i);
+  }
+}
+
