@@ -1,0 +1,5 @@
+p = mat + 1;  é valido ja que entrega ao ponteiro o endereço correspondente ao segundo espaço do vetor 
+ p = mat;` não é valido por conta do sinal " ` " apos o " ; " do contrário seria quardando o enderaço do primerio espaço do vetor mat
+
+ p =`mat; não é valido pelo mesmo motivo do item anterior do contrario seria quardando o enderaço do primerio espaço do vetor mat
+    x = (*mat);` não é valido pela presença do " ` " apos " ; " do contrário seria um comando valido quardando em x o valor de no primeiro endereço do vetor mat
