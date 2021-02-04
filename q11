@@ -1,0 +1,14 @@
+//11
+//Suponha que as seguintes declarações tenham sido realizadas:
+
+//float aloha[10], coisas[10][5], *pf, value = 2.2;
+//int i=3;
+
+// a. aloha[2] = value;           r: é valida  , quarda 2.2 na terceira casa do vetor aloha
+// b. scanf("%f", &aloha);        r: é valida  , coloca a informação lida pelo teclado no endereço inicial de aloha 
+// c. aloha = "value";            r: é invalida, aloha é um ponteiro não pode quardar "value"
+// d. printf("%f", aloha);        r: é valida  , imprime o primeiro valor do vetor aloha
+// e. coisas[4][4] = aloha[3];    r: é valida  , quarda o aloha[3] em coisas[4][4]
+// f. coisas[5] = aloha;          r: é invalida, pois não é possivel quardar um endereço em um vetor diferente de **exemplo[x]
+// g. pf =  value                 r: é invalida, não é posivel colocar um variavel comun dentro de um endereço
+// h. pf = aloha;                 r: é valida  , quardo o enderenço de aloha[0] no ponteiro pf 
