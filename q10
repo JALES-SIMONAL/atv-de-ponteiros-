@@ -1,0 +1,39 @@
+// para char : x+1 = 4093 ; x+2 = 4094; x+3 = 4095 ;
+// para int: x+1 = 4094 ; x+2 = 4096; x+3 = 4098 ;
+// para float: x+1 = 4096 ; x+2 = 4100; x+3 = 4104 ;
+// para double: x+1 = 4100 ; x+2 = 4108; x+3 = 4116 ;
+
+#include<stdlib.h>
+#include<iostream>
+using namespace std;
+int main(){
+
+char vet1[3],*p1;
+for(int i = 0;i<3;i++ ){
+  printf(" %d\n", (p1 + i));
+}
+
+cout<<endl;
+int vet2[3],*p2;
+for(int i = 0;i<3;i++ ){
+  printf(" %d\n", p2 + i);
+}
+
+cout<<endl;
+float vet4[3],*p4;
+for(int i = 0;i<3;i++ ){
+  printf(" %d\n", p4 + i);
+}
+
+cout<<endl;
+double vet3[3],*p3;
+for(int i = 0;i<3;i++ ){
+  printf(" %d\n", p3 + i);
+}
+
+
+//na ide testada 
+// char de o tamanha de 1 byte
+// int de o tamanha de 4 byte
+// float de o tamanha de 4 byte
+// double de o tamanha de 8 byte
