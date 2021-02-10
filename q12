@@ -1,0 +1,16 @@
+//ponteiro para funções serve principalmente para determinar a execução de fuçoes sem precisar chama-la diretamente por seu nome 
+
+#include<stdlib.h>
+#include<iostream>
+using namespace std;
+
+int soma( int y, int x){
+return y + x ;
+}
+
+int main(void){
+int  (*p) (int,int) = &soma; 
+cout<<p(1,3);
+return 0; 
+}
+//saida: 4
