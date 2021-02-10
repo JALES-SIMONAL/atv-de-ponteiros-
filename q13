@@ -37,3 +37,4 @@ float t;
 }
   }
   
+obs: na linha 23 a comparação correta para ordem crescentes é  (<)
