@@ -1,0 +1,46 @@
+//Reimplemente o programa da questão anterior utilizando a função qsort() do C. Comente o seucódigo, explicando o que faz cada uma das linhas.
+#include<stdlib.h>// biblioteca para a alocação dinâmica de memória
+#include<iostream> // bibli. para escrerver na tela do pc 
+using namespace std; // não precisar ultilizar 'std::' antes de todo cout ou cin 
+int f(const void* a,const void* b){ // função de paramento para qsort 
+  if(*(int*)a == *(int*)b){        //transforma a e b em enteiros localiza seus valores e os capara , retornando zero se verdade
+ return 0 ;
+  }
+    if (*(int*)a < *(int*)b){ //faz o mesmo da linha 6 comapra se a<b
+    return -1;
+    }
+     
+   else  //faz o mesmo da linha 6 comapra se a>b
+   return 1;
+     
+  
+}
+
+int main(void) {
+	int n;
+	cout << "digite quantos números"<<endl ;
+		cin >> n;
+	float  *x = (float*) malloc(n * sizeof(float)); // cria um vetor do tamanha n 
+  
+  //preenche o vetor com as informaçoes digitadas 
+	for (int i = 0; i < n; i++) {
+		cin >> x[i];
+
+	}
+
+  // reorganizao vetor
+  //paramento 1 enderenção inicial do vetor 
+  // p 2 tamanho do vetor
+  //p3 tamanha do tipo de variavel quardada
+  //p4 função de ordemamento
+qsort(x,n,sizeof(int),f);
+	
+  //imprime o vetor reordenado
+  	for (int i = 0; i < n; i++) {
+    	cout<< x[i]<<endl;
+    }
+    //libera a memoria
+    free(x);
+	return 0;
+}
+  
