@@ -12,6 +12,8 @@ tempo = (clock()-tempo)/1000;
    return 0 ;
 }
 
-programa q11
-tempo  de execu : 0,319 milisegundos
+programa  q12
+tempo de execução : 0.32 milisegundos 
+
+
 
