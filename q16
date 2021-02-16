@@ -12,7 +12,7 @@ tempo = (clock()-tempo)/1000;
    return 0 ;
 }
 
-programa  q12
+programa  q13
 tempo de execução : 0.32 milisegundos 
 
 
