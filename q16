@@ -12,8 +12,77 @@ tempo = (clock()-tempo)/1000;
    return 0 ;
 }
 
-programa  q13
-tempo de execução : 0.32 milisegundos 
+// programa q13
+// tempo : 32 milisegundos
+
+//progrma q14
+// tempo 0.202 milisegundos 
+
+//exple da ultilização de  código acima no programa 14q
+//são programas semlhantes , o o tempo neste caso depende do tamanho do vetor a ser ordenado
+// em ambos os casos foi usado o vetor de tamanho 10
+
+/*
 
 
+
+
+
+
+
+#include <stdlib.h>
+#include<iostream>
+#include<time.h>
+using  namespace std;
+int f (const void * a, const void * b) {// função de paramento para qsort 
+  if (* (int *) a == * (int *) b) {// transforma aeb em enteiros localiza seus valores e os capara, retornando zero se verdade
+ return 0;
+  }
+    if (* (int *) a <* (int *) b) {// faz o mesmo da linha 6 comapra se a <b
+    return -1;
+    }
+     
+   else // faz o mesmo da linha 6 comapra se a> b
+   return 1;
+     
+  
+}
+int main(void){
+float tempo ;
+//tempo em milisegundos
+tempo = clock();
+// função destada
+	int n;
+	cout << "digite quantos números" << endl;
+		cin >> n;
+	float * x = (float *) malloc (n * sizeof (float)); // cria um vetor do tamanha n
+  
+  // preenche o vetor com as informaçoes digitadas 
+	for (int i = 0; i <n; i ++) {
+		cin >> x [i];
+
+	}
+
+  // reorganização vetor
+  // paramento 1 enderenção inicial do vetor 
+  // p 2 tamanho do vetor
+  // p3 tamanha do tipo de variavel quardada
+  // função de ordemamento p4
+qsort (x, n, sizeof (int), f);
+	
+  // imprime o vetor reordenado
+  	for (int i = 0; i <n; i ++) {
+    	cout << x [i] << endl;
+    }
+    // libera a memoria
+    free (x);
+	
+		
+tempo = (clock()-tempo)/1000;
+
+  cout<<tempo;
+   return 0 ;
+}
+
+*/
 
