@@ -1,0 +1,131 @@
+/*
+for(int i = 0 ;i < ca ;i++){
+   c[0][0]=A[0][i]*B[i][0];
+   cout<<c[0][0];
+ }
+}
+*/
+
+
+
+
+
+#include <stdlib.h>
+#include<iostream>
+#include<time.h>
+using  namespace std;
+
+void pvetor(int **A,int **B,int **C,int Al, int Bc){
+for(int k= 0 ;k < Al ;k++){
+
+for(int j = 0 ;j < Bc ;j++){
+
+for(int i = 0 ;i < Al ;i++){
+   C[k][j]=C[k][j]+A[k][i]*B[i][j];
+   
+ }
+}
+}
+ 
+}
+  
+ 
+int main(){
+//=====================================================
+  //entrada de A
+cout<<"linhas e colunas de A"<<endl;
+int Al,Ac;
+cin>>Al;
+cin>>Ac;
+ int **A;
+ A = (int**) malloc(Al*sizeof(int*));
+A[0] = (int*) malloc (Ac*Al*sizeof(int*));
+for(int i = 1; i < Al;i++){
+  A[i]=A[i-1]+Ac;
+}
+
+//entreda da matriz A
+for(int j = 0 ;j < Al;j++){
+ for(int i = 0 ;i < Ac;i++){
+cin>>A[j][i];
+}
+}
+//=======================================================
+
+
+
+
+//==========================================================
+   // entrada de matriz B
+cout<<" colunas de B"<<endl;
+ int Bc;
+ cin>>Bc;
+ int **B;
+  B = (int**) malloc(Al*sizeof(int*));
+B[0] = (int*) malloc (Bc*Al*sizeof(int*));
+for(int i = 1; i < Al;i++){
+  B[i]=B[i-1]+Bc;
+}
+
+for(int j = 0 ;j < Ac;j++){
+ for(int i = 0 ;i < Bc;i++){
+cin>>B[j][i];
+}
+}
+//==========================================================
+
+
+int **C;
+C = (int**) malloc(Al*sizeof(int*));
+C[0] = (int*) malloc (Al*Bc*sizeof(int*));
+for(int i = 1; i < Al;i++){
+  C[i]=C[i-1]+Bc;
+}
+//===========================================================      
+pvetor( A,  B,C,Al,Bc);
+
+cout<<endl<<endl;
+//===========================================================
+  // saida de A
+  cout<< "vetor A"<<endl;
+int c = 1;
+for(int j = 0;j < Al;j++){
+  if(j == c){ cout<<endl; c= c + 1;}
+for(int i =  0;i < Ac;i++){
+cout<<A[j][i]<<" ";
+}
+}
+//============================================================= 
+
+cout<<endl<<endl;
+
+//===========================================================
+  // saida de B
+cout<< "vetor B"<<endl;
+c= 1;
+for(int j = 0;j < Ac;j++){
+if(j == c){ cout<<endl; c= c + 1;}
+for(int i =  0;i < Bc;i++){
+cout<<B[j][i]<<"  ";
+}
+}
+//===========================================================
+
+cout<<endl<<endl;
+
+//===========================================================
+  // saida de B
+cout<< "vetor C, produto matriz de A e C"<<endl;
+c= 1;
+for(int j = 0;j < Al;j++){
+if(j == c){ cout<<endl; c= c + 1;}
+for(int i =  0;i < Bc;i++){
+cout<<C[j][i]<<"  ";
+}
+}
+//===========================================================
+
+
+   return 0 ;
+} 
+//o github fica trocando o for por para e nao da para corrigir 
